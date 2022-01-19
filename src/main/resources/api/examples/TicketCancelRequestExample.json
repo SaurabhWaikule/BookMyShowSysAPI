@@ -1,0 +1,9 @@
+{
+  "Ticket":{
+    "orderId": "Ord-0001",
+    "userEmail": "sagarpatangi@gamil.com",
+    "movieName": "SpiderMan No way home",
+    "movieId": "Mov-0100", 
+    "totalSeats": 2    
+}
+}

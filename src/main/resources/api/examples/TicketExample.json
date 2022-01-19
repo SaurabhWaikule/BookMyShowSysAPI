@@ -1,0 +1,18 @@
+{
+  "Ticket":{
+    "orderId": "Ord-0001",
+    "userEmail": "sagarpatangi@gamil.com",
+    "movieId": "Mov-0100",
+    "movieName": "SpiderMan No way home",
+    "viewType": "3-D",
+    "language": "English",
+    "theaterName": "PVR SB road",
+    "screen": "Audi-9",
+    "pricePerSeat": 600,    
+    "totalSeats": 2,
+    "totalPrice": 1200,
+    "discount": 0,
+    "payableAmount": 1200,
+    "orderStatus": "Booked"
+}
+}

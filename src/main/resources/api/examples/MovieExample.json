@@ -1,0 +1,9 @@
+{
+		"Movie_ID": "MOV001",
+		"Movie_Name": "Spider-man: No Way Home",
+		"Langauge" : "English",
+		"View_type" :"3D",
+		"Screen": 2,
+		"Price": 300,
+		"Total_avaible_seats": 60
+	}

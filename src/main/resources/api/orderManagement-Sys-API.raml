@@ -1,0 +1,111 @@
+#%RAML 1.0
+title: Order-Management-Sys-API
+description: API for managing movie orders and update to the Database 
+
+mediaType:
+  - application/json
+  - application/xml
+
+version: 1.0.0
+
+protocols:
+  - HTTPS
+  - HTTP
+
+traits:
+  errorTrait: !include traits/errorTrait.raml
+  headerTrait: !include traits/headerTrait.raml
+
+uses:
+  DataType: data-types/DataTypeLib.raml
+
+
+
+/Movies:
+    displayName: Get Movie(s) Details.
+    description: Fetch Movie/Movies Details from database
+
+    is:
+      - errorTrait
+      - headerTrait
+    get:
+      description: "Get all Movies Details"
+      responses:
+        200:
+          body:
+            application/json:
+              type: DataType.Movies
+              example:
+                value: !include examples/MoviesExample.json
+    /{ID}:
+      description: "Get all Movies Details"
+      get:
+        responses:
+          200:
+            body:
+              application/json:
+                type: DataType.Movie
+                example:
+                  value: !include examples/MovieExample.json
+        
+
+/order:
+  
+    description: Method to view/book a ticket or cancel a booked ticket
+    is:
+      - errorTrait
+      - headerTrait
+    post:
+                displayName: Book Movie Ticket
+                description: Method to book ticket(s)
+
+                body:
+                  application/json:
+                    type: DataType.Tickets
+                    example: !include examples/TicketRequestExample.json
+                
+                responses:
+                  201:
+                    body:
+                      application/json:
+                        type: DataType.Tickets
+                        example: !include examples/TicketExample.json
+                   
+    get:
+        displayName: Show Ticket
+        description: Method to view ticket
+
+        queryParameters: 
+          orderId?: string
+          userEmail: 
+            pattern: ^.+@.+\..+$
+           
+        responses:
+          200:
+            body:
+              application/json:
+                type: DataType.Tickets
+                example: !include examples/TicketExample.json
+                  
+                
+    delete:
+        displayName: Cancel Ticket
+        description: Method to Cancel the ticket
+
+        queryParameters:
+          transactionId: string
+        
+        body:
+          application/json:
+            type: DataType.Tickets
+            example: !include examples/TicketCancelRequestExample.json
+        
+        responses:
+          200:
+            body:
+              application/json:
+                type: DataType.Tickets
+                example: !include examples/TicketExample.json
+                  
+
+             

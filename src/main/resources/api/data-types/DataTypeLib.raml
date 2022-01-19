@@ -1,0 +1,45 @@
+#%RAML 1.0 Library
+
+types:
+
+  Tickets:
+      properties:
+        Ticket:
+          properties:             
+            orderId?: string
+            userEmail: string
+            movieId?: string
+            movieName: string
+            viewType?: string
+            language?: string
+            screen?: string
+            totalSeats: integer
+            pricePerSeat?: integer
+            totalPrice?: integer
+            discount?: integer
+            payableAmount?: integer
+            orderStatus?: string
+
+  Movie:
+    properties:
+      Movie_ID: string
+      Movie_Name: string
+      Langauge: string
+      View_type: string
+      Screen: integer
+      Price: number
+      Total_avaible_seats: integer
+  Movies:
+    properties:
+      Movie:
+        type: Movie[]
+
+
+
+
+    
+    
+    
+
+
+  

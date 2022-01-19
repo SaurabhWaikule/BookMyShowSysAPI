@@ -1,0 +1,22 @@
+{
+	"Movie": [{
+		"Movie_ID": "MOV001",
+		"Movie_Name": "Spider-man: No Way Home",
+		"Langauge" : "English",
+		"View_type" :"3D",
+		"Screen": 2,
+		"Price": 300,
+		"Total_avaible_seats": 60
+	},
+	{
+		"Movie_ID": "MOV002",
+		"Movie_Name": "Pushpa",
+		"Langauge" : "Hindi",
+		"View_type" :"2D",
+		"Screen": 3,
+		"Price": 200,
+		"Total_avaible_seats": 60
+	}
+
+]
+}
